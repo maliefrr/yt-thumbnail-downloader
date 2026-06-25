@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube Thumbnail Downloader</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1 class="title">
+        <span class="title-icon" aria-hidden="true">▶</span>
+        YouTube Thumbnail Downloader
+      </h1>
+      <p class="subtitle">Paste a YouTube link, pick a size, and download.</p>
+    </header>
+
+    <form class="search" id="search-form" autocomplete="off">
+      <input
+        type="url"
+        id="url-input"
+        class="search-input"
+        placeholder="https://www.youtube.com/watch?v=..."
+        aria-label="YouTube video URL"
+        required
+      />
+      <button type="submit" class="search-button">Get Thumbnails</button>
+    </form>
+
+    <p class="message" id="message" role="status" aria-live="polite"></p>
+
+    <section class="results" id="results" aria-live="polite"></section>
+  </main>
+
+  <footer class="footer">
+    <p>Works with any public YouTube video. No data leaves your browser.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
